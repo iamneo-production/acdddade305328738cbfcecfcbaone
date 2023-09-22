@@ -8,8 +8,8 @@ terraform {
 
 provider "aws" {
     region = ""
-    access_key = ""
-    secret_key = ""
+    access_key = "AKIAVLQIRAIXB6P6FKPI"
+    secret_key = "no2BRBUkJkvbRIr/INsBh0f1Ero//mqxrBNeCZ9"
     
 }
 
@@ -19,5 +19,5 @@ resource "aws_instance" "ec2_instance" {
 }
 
 output "public_ip" {
-    value = aws_inst
+    value = aws_instance.ec2_instance.public_ip
 }
